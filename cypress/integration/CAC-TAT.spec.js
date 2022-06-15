@@ -33,7 +33,7 @@ describe('Central de Atendimento ao Cliente TAT', function() { //Descrição sa 
     })
 
     it('Campo telefone continua vazio quando preenchido com valor não numérico', function(){
-        cy.get('#phone999').type('abcdefghij').should('have.value', '')
+        cy.get('#phone').type('abcdefghij').should('have.value', '')
 
     })
 
@@ -138,31 +138,4 @@ describe('Central de Atendimento ao Cliente TAT', function() { //Descrição sa 
         cy.contains('Talking About Testing').should('be.visible')
     })
 
-    it('', function(){
-
-    })
-
-    it('', function(){
-
-    })
-
-    it('', function(){
-
-    })
-
-    it('', function(){
-
-    })
-
-    it('', function(){
-
-    })
-
-    it('', function(){
-
-    })
-
-    it('', function(){
-
-    })
   })
