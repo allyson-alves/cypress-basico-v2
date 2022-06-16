@@ -107,6 +107,10 @@ describe('Central de Atendimento ao Cliente TAT', function() { //Descrição sa 
         cy.contains('button', 'Enviar').click()
 
         cy.get('.error').should('be.visible')
+
+        cy.tick(3000)
+
+        cy.get('.error').should('not.be.visible')
     })
 //passamos o arquivo diretamente para selecionar
     it('Seleciona um arquivo da pasta fixtures', function(){
