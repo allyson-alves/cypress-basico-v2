@@ -98,7 +98,7 @@ describe('Central de Atendimento ao Cliente TAT', function() { //Descrição sa 
         cy.get('input[type="checkbox"]').check().should('be.checked').last().uncheck().should('not.be.checked')
     })
 
-    it.only('Exibe mensagem de erro  quando o telefone se torna obrigatório mas não é preenchido antes do envio do formulário', function(){
+    it('Exibe mensagem de erro  quando o telefone se torna obrigatório mas não é preenchido antes do envio do formulário', function(){
         cy.get('#firstName').type('Allyson')
         cy.get('#lastName').type('Alves')
         cy.get('#email').type('allyson@hotmail.com')
