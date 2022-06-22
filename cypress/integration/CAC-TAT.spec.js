@@ -7,7 +7,7 @@ describe('Central de Atendimento ao Cliente TAT', function() { //Descrição sa 
 
 
     it('Verifica o título da aplicação', function() { //descrição do teste e função de callback
-        cy.title().should('be.equal', 'Central de Atendimento ao Cliente TAT')
+        cy.title().should('be.equal', 'Central de Atendimento ao Cliente TAT123')
     })
 
     it('Preenche os campos obrigatórios e envia o formulário', function(){
@@ -33,7 +33,7 @@ describe('Central de Atendimento ao Cliente TAT', function() { //Descrição sa 
     })
 
     it('Campo telefone continua vazio quando preenchido com valor não numérico', function(){
-        cy.get('#phone123').type('abcdefghij').should('have.value', '')
+        cy.get('#phone').type('abcdefghij').should('have.value', '')
 
     })
 
