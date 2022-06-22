@@ -145,21 +145,9 @@ describe('Central de Atendimento ao Cliente TAT', function() { //Descrição sa 
     })
 
     it.only('Exibe e esconde as mensagens de sucesso e erro usando o .invoke', function (){
-        cy.get('.success')
-        cy.should('not.be.visible')
-        cy.invoke('show')
-        cy.should('be.visible')
-        cy.and('contain', 'Mensagem enviada com sucesso.')
-        cy.invoke('hide')
-        cy.should('not.be.visible')
+        cy.get('.success').should('not.be.visible').invoke("show").should('be.visible').and('contain', 'Mensagem enviada com sucesso.').invoke('hide').should('not.be.visible')
 
-        cy.get('.error')
-        cy.should('not.be.visible')
-        cy.invoke('show')
-        cy.should('be.visible')
-        cy.and('contain', 'Valide os campos obrigatório!')
-        cy.invoke('hide')
-        cy.should('not.be.visible')
+        cy.get('.error').should('not.be.visible').invoke("show").should('be.visible').and('contain', 'Valide os campos obrigatórios!').invoke('hide').should('not.be.visible')
 
     })
 
