@@ -7,7 +7,7 @@ describe('Central de Atendimento ao Cliente TAT', function() { //Descrição sa 
 
 
     it('Verifica o título da aplicação', function() { //descrição do teste e função de callback
-        cy.title().should('be.equal', 'Central de Atendimento ao Cliente TAT123')
+        cy.title().should('be.equal', 'Central de Atendimento ao Cliente TAT')
     })
 
     it('Preenche os campos obrigatórios e envia o formulário', function(){
